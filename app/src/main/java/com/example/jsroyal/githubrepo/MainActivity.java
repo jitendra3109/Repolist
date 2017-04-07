@@ -1,10 +1,12 @@
 package com.example.jsroyal.githubrepo;
+
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.widget.ListView;
 import android.widget.Toast;
 
 import java.util.List;
+
 import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
@@ -22,6 +24,8 @@ public class MainActivity extends AppCompatActivity {
 
         listView = (ListView) findViewById(R.id.list_item);
 
+        Bundle extras = getIntent().getExtras();
+        String userName = extras.getString("githubRepo");
 
         Retrofit.Builder builder = new Retrofit.Builder()
                 .baseUrl("https://api.github.com/")
@@ -30,7 +34,7 @@ public class MainActivity extends AppCompatActivity {
         Retrofit retrofit = builder.build();
 
         GitHubClient client = retrofit.create(GitHubClient.class);
-        Call<List<GitHubRepo>> call = client.reposForUser("jsroyal");
+        Call<List<GitHubRepo>> call = client.reposForUser(userName);
 
         call.enqueue(new Callback<List<GitHubRepo>>() {
             @Override
