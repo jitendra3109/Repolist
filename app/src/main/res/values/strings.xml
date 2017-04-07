@@ -1,4 +1,7 @@
 <resources>
     <string name="app_name">GitHubRepo</string>
     <string name="submit_button">Submit</string>
+    <string name="enter_github_user_name">Enter your GitHub user ID</string>
+    <string name="heading">Do you want to see your Repo list :)</string>
+
 </resources>

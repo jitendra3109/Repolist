@@ -6,26 +6,33 @@
     android:layout_height="match_parent"
     tools:context="com.example.jsroyal.githubrepo.UserID">
 
+    <TextView
+        android:id="@+id/heading"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/submit"
+        android:layout_alignParentTop="true"
+        android:layout_alignStart="@+id/submit"
+        android:layout_marginTop="28dp"
+        android:text="@string/heading" />
+
     <EditText
         android:id="@+id/github_user_name"
-        android:layout_width="match_parent"
+        android:layout_width="250dp"
         android:layout_height="wrap_content"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentTop="true"
-        android:layout_marginLeft="10dp"
-        android:layout_marginStart="10dp"
-        android:layout_marginTop="82dp"
-        android:hint="Enter GitHub user name" />
+        android:layout_below="@+id/heading"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="15dp"
+        android:gravity="center"
+        android:hint="@string/enter_github_user_name" />
 
     <Button
         android:id="@+id/submit"
-        android:layout_width="match_parent"
+        android:layout_width="200dp"
         android:layout_height="wrap_content"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true"
         android:layout_below="@+id/github_user_name"
-        android:layout_marginTop="71dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="24dp"
         android:text="@string/submit_button" />
 
 </RelativeLayout>
